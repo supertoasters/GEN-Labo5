@@ -22,19 +22,4 @@ private:
     Price* _priceCode;
 };
 
-inline Movie::
-Movie( const std::string& title, Price* movieTypePrice )
-        : _title( title )
-        , _priceCode( movieTypePrice )
-{}
-
-inline Price* Movie::
-getPrice() const { return _priceCode; }
-
-//inline void Movie::
-//setPriceCode( int arg ) { _priceCode = arg; }
-
-inline std::string Movie::
-getTitle() const { return _title; }
-
 #endif // MOVIE_H

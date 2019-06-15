@@ -10,7 +10,8 @@
 
 class NewReleaseMoviePrice : public Price {
 public:
-    double movieType(int daysRented);
+    double getPriceByType(int daysRented);
+    int calculateFrequentRenterPoints(int daysRented);
 
 };
 

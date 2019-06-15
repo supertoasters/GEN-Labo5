@@ -2,6 +2,8 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
+#include "price/Price.h"
+#include "price/RegularMoviePrice.h"
 
 class Movie {
 public:
@@ -9,28 +11,28 @@ public:
     static const int REGULAR     = 0;
     static const int NEW_RELEASE = 1;
 
-    Movie( const std::string& title, int priceCode = REGULAR );
+    Movie( const std::string& title, Price* movieTypePrice = new RegularMoviePrice() );
 
-    int getPriceCode() const;
-    void setPriceCode( int arg );
+    Price* getPrice() const;
+    //void setPriceCode( int arg );
     std::string getTitle() const;
 
 private:
     std::string _title;
-    int _priceCode;
+    Price* _priceCode;
 };
 
 inline Movie::
-Movie( const std::string& title, int priceCode )
+Movie( const std::string& title, Price* movieTypePrice )
         : _title( title )
-        , _priceCode( priceCode )
+        , _priceCode( movieTypePrice )
 {}
 
-inline int Movie::
-getPriceCode() const { return _priceCode; }
+inline Price* Movie::
+getPrice() const { return _priceCode; }
 
-inline void Movie::
-setPriceCode( int arg ) { _priceCode = arg; }
+//inline void Movie::
+//setPriceCode( int arg ) { _priceCode = arg; }
 
 inline std::string Movie::
 getTitle() const { return _title; }

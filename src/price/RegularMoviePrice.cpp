@@ -4,7 +4,7 @@
 
 #include "RegularMoviePrice.h"
 
-double RegularMoviePrice::movieType(int daysRented) {
+double RegularMoviePrice::getPriceByType(int daysRented) {
     double amount = 2;
 
     if (daysRented > 2) {

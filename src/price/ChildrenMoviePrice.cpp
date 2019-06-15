@@ -4,7 +4,7 @@
 
 #include "ChildrenMoviePrice.h"
 
-double ChildrenMoviePrice::movieType(int daysRented) {
+double ChildrenMoviePrice::getPriceByType(int daysRented) {
     double amount = 1.5;
 
     if (daysRented > 3) {

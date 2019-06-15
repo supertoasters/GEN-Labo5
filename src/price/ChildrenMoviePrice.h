@@ -10,7 +10,7 @@
 
 class ChildrenMoviePrice : public Price {
 public:
-    double movieType(int daysRented);
+    double getPriceByType(int daysRented);
 
 };
 

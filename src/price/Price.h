@@ -8,7 +8,8 @@
 
 class Price {
 public:
-    virtual double movieType(int daysRented) = 0;
+    virtual double getPriceByType(int daysRented) = 0;
+    int calculateFrequentRenterPoints(int daysRented);
 
 };
 

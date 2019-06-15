@@ -8,25 +8,16 @@ using std::vector;
 
 using namespace std;
 
-Customer::
-Customer() {}
+Customer::Customer() {}
 
-Customer::
-Customer( const std::string& name )
-        : _name( name ) {}
+Customer::Customer( const std::string& name ) : _name( name ) {}
 
-void Customer::
-addRental( const Rental& arg ) { _rentals.push_back( arg ); }
-
-std::string Customer::
-getName() const { return _name; }
-
-double Customer::calculateAmount(Rental rental) {
-    return rental.getMovie().getPrice()->getPriceByType(rental.getDaysRented());
+void Customer::addRental( const Rental& arg ) {
+    _rentals.push_back( arg );
 }
 
-int Customer::addFrequentRenterPoints(Rental rental) {
-    return rental.getMovie().getPrice()->calculateFrequentRenterPoints(rental.getDaysRented());
+std::string Customer::getName() const {
+    return _name;
 }
 
 string Customer::statement() {
@@ -41,15 +32,16 @@ string Customer::statement() {
         Rental thisRental = *iter;
 
         /* Determine amounts for each line */
-        double thisAmount = calculateAmount(thisRental);
+        double thisAmount = thisRental.calculateAmount();
 
         /* Add frequent renter points */
-        frequentRenterPoints += addFrequentRenterPoints(thisRental);
+        frequentRenterPoints += thisRental.addFrequentRenterPoints();
 
         // show figures for this rental
         result << "\t" << thisRental.getMovie().getTitle() << "\t" << thisAmount << "\n";
         totalAmount += thisAmount;
     }
+
     // add footer lines
     result << "Amount owed is " << totalAmount << "\n";
     result << "You earned " << frequentRenterPoints

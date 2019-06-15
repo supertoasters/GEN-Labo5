@@ -7,16 +7,17 @@ add_executable(Main
         src/main.cpp
         src/Customer.cpp src/Customer.h
         src/Movie.cpp src/Movie.h
-        src/Rental.h
+        src/Rental.h src/Rental.cpp
         src/price/Price.cpp src/price/Price.h
         src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h
         src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h
-        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h)
+        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h src/Rental.cpp)
 
 add_executable(Testing
         src/Customer.cpp src/Customer.h
         src/Movie.cpp src/Movie.h
-        src/Rental.h test/CustomerTest.cpp
+        src/Rental.h  src/Rental.cpp
+        test/CustomerTest.cpp
         src/price/Price.cpp src/price/Price.h
         src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h
         src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h

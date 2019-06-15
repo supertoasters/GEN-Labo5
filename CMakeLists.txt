@@ -8,7 +8,7 @@ add_executable(Main
         src/Customer.cpp src/Customer.h
         src/Movie.cpp src/Movie.h
         src/Rental.h
-)
+        src/price/Price.h src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h)
 
 add_executable(Testing
         src/Customer.cpp src/Customer.h

@@ -1,0 +1,15 @@
+//
+// Created by caroline on 15.06.19.
+//
+
+#include "ChildrenMoviePrice.h"
+
+double ChildrenMoviePrice::movieType(int daysRented) {
+    double amount = 1.5;
+
+    if (daysRented > 3) {
+        amount += (daysRented - 3) * 1.5;
+    }
+
+    return amount;
+}

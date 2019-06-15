@@ -21,7 +21,7 @@ double Customer::calculateAmount(Rental rental) {
         case Movie::NEW_RELEASE:
             amount += rental.getDaysRented() * 3;
             break;
-        case Movie::CHILDRENS:
+        case Movie::CHILDREN:
             amount += 1.5;
             if (rental.getDaysRented() > 3)
                 amount += (rental.getDaysRented() - 3) * 1.5;

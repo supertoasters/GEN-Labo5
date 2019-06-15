@@ -8,6 +8,18 @@ using std::vector;
 
 using namespace std;
 
+Customer::Customer() { }
+
+Customer::Customer( const std::string& name ) : _name( name ) { }
+
+void Customer::addRental( const Rental& arg ) {
+    _rentals.push_back( arg );
+}
+
+std::string Customer::getName() const {
+    return _name;
+}
+
 double Customer::calculateAmount(Rental rental) {
 
     double amount = 0;
@@ -68,6 +80,6 @@ string Customer::statement() {
     result << "Amount owed is " << totalAmount << "\n";
     result << "You earned " << frequentRenterPoints
            << " frequent renter points";
-    
+
     return result.str();
 }

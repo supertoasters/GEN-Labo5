@@ -8,51 +8,25 @@ using std::vector;
 
 using namespace std;
 
-Customer::Customer() { }
+Customer::
+Customer() {}
 
-Customer::Customer( const std::string& name ) : _name( name ) { }
+Customer::
+Customer( const std::string& name )
+        : _name( name ) {}
 
-void Customer::addRental( const Rental& arg ) {
-    _rentals.push_back( arg );
-}
+void Customer::
+addRental( const Rental& arg ) { _rentals.push_back( arg ); }
 
-std::string Customer::getName() const {
-    return _name;
-}
+std::string Customer::
+getName() const { return _name; }
 
 double Customer::calculateAmount(Rental rental) {
-
-    double amount = 0;
-
-    switch (rental.getMovie().getPriceCode()) {
-        case Movie::REGULAR:
-            amount += 2;
-            if (rental.getDaysRented() > 2)
-                amount += (rental.getDaysRented() - 2) * 1.5;
-            break;
-        case Movie::NEW_RELEASE:
-            amount += rental.getDaysRented() * 3;
-            break;
-        case Movie::CHILDRENS:
-            amount += 1.5;
-            if (rental.getDaysRented() > 3)
-                amount += (rental.getDaysRented() - 3) * 1.5;
-            break;
-    }
-
-    return amount;
+    return rental.getMovie().getPrice()->getPriceByType(rental.getDaysRented());
 }
 
 int Customer::addFrequentRenterPoints(Rental rental) {
-    int frequentRenterPoints = 1;
-
-    // add bonus for a two day new release rental
-    if ((rental.getMovie().getPriceCode() == Movie::NEW_RELEASE)
-        && rental.getDaysRented() > 1) {
-        ++frequentRenterPoints;
-    }
-
-    return frequentRenterPoints;
+    return rental.getMovie().getPrice()->calculateFrequentRenterPoints(rental.getDaysRented());
 }
 
 string Customer::statement() {

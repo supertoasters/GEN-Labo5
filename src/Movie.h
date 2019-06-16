@@ -13,6 +13,8 @@ public:
     Price* getPrice() const;
     //void setPriceCode( int arg );
     std::string getTitle() const;
+    double calculateAmount(int daysRented);
+    int calculateFrequentRenterPoints(int daysRented);
 
 private:
     std::string _title;

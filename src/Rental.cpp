@@ -13,11 +13,11 @@ const Movie &Rental::getMovie() const {
 }
 
 double Rental::calculateAmount() {
-    return _movie.getPrice()->getPriceByType(_daysRented);
+    return _movie.calculateAmount(_daysRented);
 }
 
 int Rental::addFrequentRenterPoints() {
-    return _movie.getPrice()->calculateFrequentRenterPoints(_daysRented);
+    return _movie.calculateFrequentRenterPoints(_daysRented);
 }
 
 

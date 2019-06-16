@@ -30,14 +30,13 @@ string Customer::statement() {
         Rental thisRental = *iter;
 
         /* Determine amounts for each line */
-        double thisAmount = thisRental.calculateAmount();
+        totalAmount += thisRental.calculateAmount();
 
         /* Add frequent renter points */
         frequentRenterPoints += thisRental.addFrequentRenterPoints();
 
         // show figures for this rental
-        result << "\t" << thisRental.getMovie().getTitle() << "\t" << thisAmount << "\n";
-        totalAmount += thisAmount;
+        result << "\t" << thisRental.getMovie().getTitle() << "\t" << thisRental.calculateAmount() << "\n";
     }
 
     // add footer lines

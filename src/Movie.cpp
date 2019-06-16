@@ -15,3 +15,10 @@ Price* Movie::getPrice() const {
 std::string Movie::getTitle() const {
     return _title;
 }
+
+double Movie::calculateAmount(int daysRented) {
+    return _priceCode->getPriceByType(daysRented);
+}
+int Movie::calculateFrequentRenterPoints(int daysRented) {
+    return _priceCode->calculateFrequentRenterPoints(daysRented);
+}

@@ -16,14 +16,12 @@ TEST(CustomerTest, simple) {
     Customer customer(CUSTOMER_NAME);
     customer.addRental( Rental( Movie( MOVIE_NAME, new RegularMoviePrice() ), DAYS_RENTED));
 
-    std::string result = "Rental Record for " + CUSTOMER_NAME + "\n\t" + MOVIE_NAME + '\t' + std::to_string(AMOUNT) + "\nAmount owed is " + std::to_string(AMOUNT) + "\nYou earned 1 frequent renter points";
+    std::string result = "Rental Record for " + CUSTOMER_NAME + "\n\t" + MOVIE_NAME + '\t' + std::to_string(AMOUNT) +
+            "\nAmount owed is " + std::to_string(AMOUNT) + "\nYou earned 1 frequent renter points";
 
     ASSERT_EQ(customer.statement(),
                  result
     );
 }
-
-
-
 
 #endif //GENLAB05_CUSTOMERTEST_CPP

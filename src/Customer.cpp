@@ -10,10 +10,10 @@ using namespace std;
 
 Customer::Customer() {}
 
-Customer::Customer( const std::string& name ) : _name( name ) {}
+Customer::Customer(const std::string &name) : _name(name) {}
 
-void Customer::addRental( const Rental& arg ) {
-    _rentals.push_back( arg );
+void Customer::addRental(const Rental &arg) {
+    _rentals.push_back(arg);
 }
 
 std::string Customer::getName() const {

@@ -1,6 +1,3 @@
-//
-// Created by caroline on 15.06.19.
-//
 
 #include "NewReleaseMoviePrice.h"
 

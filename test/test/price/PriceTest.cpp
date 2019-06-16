@@ -1,6 +1,3 @@
-//
-// Created by baribal on 6/16/19.
-//
 
 #ifndef GENLAB05_PRICETEST_CPP
 #define GENLAB05_PRICETEST_CPP

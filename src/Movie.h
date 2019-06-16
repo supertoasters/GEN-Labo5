@@ -1,4 +1,4 @@
-// Movie.h
+
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
@@ -11,7 +11,6 @@ public:
     Movie( const std::string& title, Price* movieTypePrice = new RegularMoviePrice() );
 
     Price* getPrice() const;
-    //void setPriceCode( int arg );
     std::string getTitle() const;
     double calculateAmount(int daysRented);
     int calculateFrequentRenterPoints(int daysRented);

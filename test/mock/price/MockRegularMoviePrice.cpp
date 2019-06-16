@@ -1,3 +1,4 @@
+
 #include "../../../src/price/RegularMoviePrice.h"
 #include "gmock/gmock.h"
 

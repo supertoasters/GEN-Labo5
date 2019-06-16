@@ -1,6 +1,3 @@
-//
-// Created by caroline on 15.06.19.
-//
 
 #ifndef GEN_LAB05_CHILDRENMOVIEPRICE_H
 #define GEN_LAB05_CHILDRENMOVIEPRICE_H

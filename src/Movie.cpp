@@ -1,3 +1,4 @@
+
 #include "Movie.h"
 
 Movie::Movie( const std::string& title, Price* movieTypePrice )
@@ -8,9 +9,6 @@ Movie::Movie( const std::string& title, Price* movieTypePrice )
 Price* Movie::getPrice() const {
     return _priceCode;
 }
-
-//inline void Movie::
-//setPriceCode( int arg ) { _priceCode = arg; }
 
 std::string Movie::getTitle() const {
     return _title;

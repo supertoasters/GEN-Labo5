@@ -26,7 +26,8 @@ add_executable(Testing
         test/test/price/PriceTest.cpp
         test/mock/price/MockRegularMoviePrice.cpp
         test/test/MovieTest.cpp
-        test/mock/MockMovie.cpp)
+        test/mock/MockMovie.cpp
+        test/test/TestRental.cpp)
 
 include(DownloadProject.cmake)
 download_project(PROJ                googletest

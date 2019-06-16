@@ -10,6 +10,10 @@ Price* Movie::getPrice() const {
     return _priceCode;
 }
 
+void Movie::setPrice(Price* newPriceType) {
+    _priceCode = newPriceType;
+}
+
 std::string Movie::getTitle() const {
     return _title;
 }

@@ -11,6 +11,7 @@ public:
     Movie( const std::string& title, Price* movieTypePrice = new RegularMoviePrice() );
 
     Price* getPrice() const;
+    void setPrice(Price*);
     std::string getTitle() const;
     double calculateAmount(int daysRented);
     int calculateFrequentRenterPoints(int daysRented);

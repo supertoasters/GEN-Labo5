@@ -13,5 +13,9 @@ int main() {
 
     std::cout << customer.statement() << std::endl;
 
+    RegularMoviePrice rmp;
+    std::cout << rmp.getPriceByType(15) << std::endl;
+
+
     return 0;
 }

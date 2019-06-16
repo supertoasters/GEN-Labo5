@@ -11,7 +11,8 @@ add_executable(Main
         src/price/Price.cpp src/price/Price.h
         src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h
         src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h
-        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h src/Rental.cpp)
+        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h
+        )
 
 add_executable(Testing
         src/Customer.cpp src/Customer.h
@@ -21,7 +22,10 @@ add_executable(Testing
         src/price/Price.cpp src/price/Price.h
         src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h
         src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h
-        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h)
+        src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h
+        test/price/NewRealeaseMoviePriceMock.cpp
+        test/price/ChildrenMoviePriceMock.cpp
+        test/price/RegularMoviePriceMock.cpp test/price/PriceMock.cpp test/price/PriceTest.cpp)
 
 include(DownloadProject.cmake)
 download_project(PROJ                googletest

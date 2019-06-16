@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "price/MockRegularMoviePrice.cpp"
-#include "../src/Movie.h"
+#include "../mock/price/MockRegularMoviePrice.cpp"
+#include "../../src/Movie.h"
 
 using ::testing::AtLeast;
 using ::testing::Return;
@@ -16,7 +16,7 @@ TEST(TestMovie, simple){
     Movie movie(MOVIE_TITLE, &mock);
 
 
-    //ASSERT_EQ(MOVIE_TITLE, movie.getTitle());
+    ASSERT_EQ(MOVIE_TITLE, movie.getTitle());
     ASSERT_EQ(21.5, movie.getPrice()->getPriceByType(15));
 
 }

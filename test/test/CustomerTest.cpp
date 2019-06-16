@@ -3,9 +3,9 @@
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../src/Customer.h"
-#include "../src/Movie.h"
-#include "../src/Rental.h"
+#include "../../src/Customer.h"
+#include "../../src/Movie.h"
+#include "../../src/Rental.h"
 
 TEST(CustomerTest, simple) {
     const std::string CUSTOMER_NAME = "Darth Vader";

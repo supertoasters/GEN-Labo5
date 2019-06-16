@@ -18,12 +18,12 @@ add_executable(Testing
         src/Customer.cpp src/Customer.h
         src/Movie.cpp src/Movie.h
         src/Rental.h  src/Rental.cpp
-        test/CustomerTest.cpp
+        test/test/CustomerTest.cpp
         src/price/Price.cpp src/price/Price.h
         src/price/RegularMoviePrice.cpp src/price/RegularMoviePrice.h
         src/price/NewReleaseMoviePrice.cpp src/price/NewReleaseMoviePrice.h
         src/price/ChildrenMoviePrice.cpp src/price/ChildrenMoviePrice.h
-        test/price/PriceTest.cpp test/price/MockRegularMoviePrice.cpp test/MockRegularMoviePrice.cpp)
+        test/test/price/PriceTest.cpp test/mock/price/MockRegularMoviePrice.cpp test/test/MovieTest.cpp test/mock/MockRental.cpp test/mock/MockMovie.cpp)
 
 include(DownloadProject.cmake)
 download_project(PROJ                googletest

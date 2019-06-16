@@ -8,9 +8,9 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-#include "../../src/price/RegularMoviePrice.h"
-#include "../../src/price/ChildrenMoviePrice.h"
-#include "../../src/price/NewReleaseMoviePrice.h"
+#include "../../../src/price/RegularMoviePrice.h"
+#include "../../../src/price/ChildrenMoviePrice.h"
+#include "../../../src/price/NewReleaseMoviePrice.h"
 
 /**
  * Regular Movie price

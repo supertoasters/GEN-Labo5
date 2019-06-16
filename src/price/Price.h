@@ -5,7 +5,7 @@
 
 class Price {
 public:
-    /*
+
     static Price* _regularMoviePrice;
     static Price* _childrenMoviePrice;
     static Price* _newReleaseMoviePrice;
@@ -13,7 +13,7 @@ public:
     static Price* setRegularMoviePrice();
     static Price* setChildrenMoviePrice();
     static Price* setNewReleaseMoviePrice();
-     */
+
 
 
     virtual double getPriceByType(int daysRented) = 0;

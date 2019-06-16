@@ -1,4 +1,5 @@
 
+#include <sstream>
 #include "Rental.h"
 
 Rental::Rental(const Movie &movie, int daysRented)
@@ -18,6 +19,14 @@ double Rental::calculateAmount() {
 
 int Rental::addFrequentRenterPoints() {
     return _movie.calculateFrequentRenterPoints(_daysRented);
+}
+
+std::string Rental::statement()  {
+    // create an output string stream
+    std::ostringstream streamObj;
+    // add caracter, double and string to stream
+    streamObj << "\t" << getMovie().getTitle() << "\t" << calculateAmount() << "\n";
+    return streamObj.str();
 }
 
 

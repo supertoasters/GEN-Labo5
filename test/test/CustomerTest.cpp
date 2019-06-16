@@ -6,6 +6,7 @@
 #include "../../src/Customer.h"
 #include "../../src/Movie.h"
 #include "../../src/Rental.h"
+#include "../mock/MockMovie.cpp"
 
 TEST(CustomerTest, simple) {
     const std::string CUSTOMER_NAME = "Darth Vader";
@@ -23,5 +24,6 @@ TEST(CustomerTest, simple) {
                  result
     );
 }
+
 
 #endif //GENLAB05_CUSTOMERTEST_CPP

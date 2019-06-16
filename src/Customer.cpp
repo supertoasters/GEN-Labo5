@@ -36,7 +36,7 @@ string Customer::statement() {
         frequentRenterPoints += thisRental.addFrequentRenterPoints();
 
         // show figures for this rental
-        result << "\t" << thisRental.getMovie().getTitle() << "\t" << thisRental.calculateAmount() << "\n";
+        result << thisRental.statement();
     }
 
     // add footer lines
